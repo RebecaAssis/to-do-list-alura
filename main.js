@@ -1,6 +1,14 @@
     import BotaoConclui from "./componentes/concluiTarefa.js"
     import BotaoDeleta from "./componentes/deletaTarefa.js"
 
+    const elementoPai = document.querySelector("[data-div-app]");
+    const elementoReferencia = document.querySelector("[data-to-do-list]")
+    const tituloPrincipal = document.createElement("p");
+
+    tituloPrincipal.classList.add("main-title");
+    tituloPrincipal.innerText = "To-do List";
+    elementoPai.insertBefore(tituloPrincipal, elementoReferencia);
+
     const criarTarefa = (evento) => {
 
     evento.preventDefault();
